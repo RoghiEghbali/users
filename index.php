@@ -29,7 +29,7 @@
 
 <!-- Show list of users -->
 <?php foreach ($users as $user) {
-  echo '<p>My name is <b>'.$user['name'].'</b> and my email is <b>'.$user['email'].'</b></p>';
+  echo '<p>My Name is <b>'.$user['name'].'</b> and my email is <b>'.$user['email'].'</b></p>';
 } ?>
 
 </form>
