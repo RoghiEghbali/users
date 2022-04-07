@@ -1,3 +1,5 @@
+<?php require('users.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +27,10 @@
 
 <input type="submit" name='submit' id="submit">
 
+<!-- Show list of users -->
+<?php foreach ($users as $user) {
+  echo '<p>My name is <b>'.$user['name'].'</b> and my email is <b>'.$user['email'].'</b></p>';
+} ?>
 
 </form>
 </body    >
