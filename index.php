@@ -1,23 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<h1> blood  donation camp </h1>
+<body  bgcolor = green>
+  
+<div> <h2> Registration Form  </h2></div>
 
- <?php
-$mysqli = new mysqli("localhost","root","","roghi");
+<form action="connect.php"  method="post">
 
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
+<label for="user"> Name:</label><br>
+<input type="text" name='name' id="name" required> <br><br>
+<label for="email"> Email:</label><br>
+<input type="email" name='email' id="email" required> <br><br>
+<label for="phone"> Phone:</label><br>
+<input type="text" name='phone' id="phone" required> <br><br>
+
+<label for="bgroup"> Blood Group:</label><br>
+<input type="bgroup" name='bgroup' id="bgroup" required> <br><br>
+
+<input type="submit" name='submit' id="submit">
 
 
-$sql = "SELECT * FROM Users WHERE first_name = 'Roghi'";
-$result = $mysqli -> query($sql);
-
-// Fetch all
-$items = $result -> fetch_all(MYSQLI_ASSOC);
-
-// Free result set
-echo '<pre>';
-print_r($items);
-
-$mysqli -> close();
-?> 
+</form>
+</body    >
+</html>
